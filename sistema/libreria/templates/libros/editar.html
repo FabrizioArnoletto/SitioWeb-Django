@@ -1,0 +1,19 @@
+{%extends "base.html"%} 
+{%block titulo%} Editar {%endblock%}
+{%block contenido%}
+<div class='col-6'>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="{%url 'crear'%}">Crear</a>
+                            <a class="dropdown-item" href="{%url 'editar'%}">Editar</a>
+                            <a class="dropdown-item" href="{%url 'form'%}">Form</a>
+                        </div>
+                </ul>
+            </div>
+      </div>
+    </nav>
+</div>
+
+{%endblock%}
