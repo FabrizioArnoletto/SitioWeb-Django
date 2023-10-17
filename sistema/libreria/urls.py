@@ -10,5 +10,6 @@ urlpatterns = [
     path('form/', views.librosf, name='form'),
     path('editar/', views.librose, name='editar'),
     path('crear/', views.librosc, name='crear'),
+    path('signup/', views.sesion, name='sesion'),
 ]
 

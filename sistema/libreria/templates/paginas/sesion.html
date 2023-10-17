@@ -1,0 +1,66 @@
+
+{%extends "base.html"%} 
+{%block titulo%} Iniciar Sesión {%endblock%}
+{%block contenido%}
+    <style>
+        .login-container {
+            background-color: #fff;
+            border-radius: 5px;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            font-size: 24px;
+        }
+
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+</body>
+</html>
+
+{%endblock%}
