@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'sistema.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASE = {
+DATABASES = {
     'default': {
     'ENGINE':'django.db.backends.mysql',
     'NAME':'libreria',
@@ -73,12 +73,6 @@ DATABASE = {
     }
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
