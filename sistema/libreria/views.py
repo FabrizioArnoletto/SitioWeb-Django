@@ -11,9 +11,6 @@ def sesion(request):
 def nosotros(request):
     return render(request,'paginas/nosotros.html')
 
-def libros(request):
-    return render(request,'libros/libros.html')
-
 def librosc(request):
     return render(request,'libros/crear.html')
 
@@ -23,12 +20,6 @@ def librose(request):
 def librosf(request):
     return render(request,'libros/form.html')
 
-
-
-def libros(request):
-    libros = Libro.objects.all()
-    print(libros)
-    return render(request, 'libros/libros.html')
 
 def libros(request):
     libros = Libro.objects.all()

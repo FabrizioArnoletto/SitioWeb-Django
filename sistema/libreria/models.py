@@ -1,15 +1,15 @@
 from django.db import models
 
 class Libro(models.Model):
-    id=models.AutoField(primary_key=True)
-    titulo=models.CharField(max_length=100,verbose_name="Titulo")
-    imagen=models.ImageField(upload_to='imagenes/',verbose_name="Imagen",null=True)
-    descripcion=models.TextField(null=True,verbose_name="Descripcion")
+    ID=models.AutoField(primary_key=True)
+    Titulo=models.CharField(max_length=100,verbose_name="Titulo")
+    Imagen=models.ImageField(upload_to='imagenes/',verbose_name="Imagen",null=True)
+    Descripcion=models.TextField(null=True,verbose_name="Descripción")
 
     def __str__(self):
-        fila= "Titulo: " + self.titulo + "-" + "Descripcion " + self.descripcion
+        fila= "Titulo: " + self.Titulo + "-" + "Descripcion " + self.Descripcion
         return fila
 
     def delete(self, using=None, Keep_parents=False):
-        self.imagen.storage.delete(self.imagen.name)
+        self.Imagen.storage.delete(self.Imagen.name)
         super().delete()
