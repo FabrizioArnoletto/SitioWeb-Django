@@ -4,16 +4,6 @@ from .models import Libro
 from .forms import LibroForm
 from django.shortcuts import render, redirect
 
-def libros(request):
-    libros = Libro.objects.all()
-    print(libros)
-    return render(request, 'libros/libros.html')
-
-def libros(request):
-    libros = Libro.objects.all()
-    print(libros)
-    return render(request, 'libros/libros.html', {'libros':libros})
-
 def inicio(request):
     return render(request,'paginas/inicio.html')
 
@@ -23,14 +13,14 @@ def sesion(request):
 def nosotros(request):
     return render(request,'paginas/nosotros.html')
 
-def librosc(request):
+def crear(request):
     formulario = LibroForm(request.POST or None,request.FILES or None)
     if formulario.is_valid():
         formulario.save()
         return redirect("{%url 'libros'%}")
     return render(request, 'libros/crear.html', {'formulario':formulario})
 
-def librose(request,id):
+def editar(request,id):
     libro=Libro.objects.get(id=id)
     #recuperamos la informacion del libro
     formulario = LibroForm(request.POST or None,request.FILES or None, instance=libro)
@@ -39,7 +29,7 @@ def librose(request,id):
         return redirect('libros')
     return render(request,'libros/editar.html',{'formulario':formulario})
 
-def librosf(request):
+def form(request):
     return render(request,'libros/form.html')
 
 
@@ -47,3 +37,8 @@ def libros(request):
     libros = Libro.objects.all()
     print(libros)
     return render(request, 'libros/libros.html', {'libros':libros})
+
+def eliminar(request,id):
+    libro= Libro.objects.get(id=id)
+    libro.delete()
+    return redirect('libros')
