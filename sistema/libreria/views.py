@@ -21,10 +21,10 @@ def crear(request):
     return render(request, 'libros/crear.html', {'formulario':formulario})
 
 def editar(request,id):
-    libro=Libro.objects.get(id=id)
+    libro=Libro.objects.get(ID=id)
     #recuperamos la informacion del libro
     formulario = LibroForm(request.POST or None,request.FILES or None, instance=libro)
-    if formulario.is_valid() and request.POST : 
+    if formulario.is_valid() and request.POST:
         formulario.save()
         return redirect('libros')
     return render(request,'libros/editar.html',{'formulario':formulario})
@@ -39,6 +39,6 @@ def libros(request):
     return render(request, 'libros/libros.html', {'libros':libros})
 
 def eliminar(request,id):
-    libro= Libro.objects.get(id=id)
+    libro= Libro.objects.get(ID=id)
     libro.delete()
-    return redirect('libros')
+    return redirect('libros/')

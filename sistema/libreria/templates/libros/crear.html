@@ -15,11 +15,17 @@
     </div>
   </nav>
 </div>
-<form method="post" enctype="multipart/form-data">
-<div class="mb-3">
-  <label for="" class="form-label">Nombre:</label>
-  <input type="text"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-  <small id="helpId" class="form-text text-muted"></small>
+<div class="card">
+  <div class="card-header">
+      crear un libro
+  </div>
+  <div class="card-body">
+      <h4 class="card-tittle">datos de libro</h4>
+      {% include "libros/form.html" %}
+  </div>
+  <div class="card-footer text-muted">
+
+  </div>
+
 </div>
 {%endblock%}

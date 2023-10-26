@@ -5,9 +5,25 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
                     
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% for campo in formulario %}
+                                <div class="mb-3">
+                                    <label for="" class="form-label">{{campo.label}}: </label>
+                                    <input type="{{campo.field.widget.input_type}}"
+                                        class="form-control"
+                                        name="{{campo.name}}"
+                                        id=""
+                                        aria-describedby="helpId"
+                                        placeholder="{{campo.label}}">
+                                </div>
+                                <div class="col-12 help-text">{{campo.errors}} </div>
+                                {% endfor %}
+                                <input name="" id="" class="btn btn-success" type="submit"value="Enviar Información">
+                            </form>
+                        </tbody>    
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="{%url 'crear'%}">Crear</a>
-                            <a class="dropdown-item" href="{%url 'editar'%}">Editar</a>
                             <a class="dropdown-item" href="{%url 'form'%}">Form</a>
                         </div>
                 </ul>
