@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from.import views
+from. import views
 
 urlpatterns = [
     path('', views.inicio, name='inicio'),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('editar/', views.librose, name='editar'),
     path('crear/', views.librosc, name='crear'),
     path('signup/', views.sesion, name='sesion'),
+    path('eliminar/<int:id>',views.librose, name='eliminar')
 ]
 
