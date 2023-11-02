@@ -17,7 +17,7 @@ def crear(request):
     formulario = LibroForm(request.POST or None,request.FILES or None)
     if formulario.is_valid():
         formulario.save()
-        return redirect("{%url 'libros'%}")
+        return render(request, 'libros/libros.html')
     return render(request, 'libros\crear.html', {'formulario':formulario})
 
 def editar(request,id):
@@ -37,4 +37,4 @@ def libros(request):
 def eliminar(request,id):
     libro= Libro.objects.get(ID=id)
     libro.delete()
-    return redirect('libros/')
+    return render(request, 'libros/libros.html')
