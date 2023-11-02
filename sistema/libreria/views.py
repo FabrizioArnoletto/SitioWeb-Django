@@ -18,7 +18,7 @@ def crear(request):
     if formulario.is_valid():
         formulario.save()
         return redirect("{%url 'libros'%}")
-    return render(request, 'libros/crear.html', {'formulario':formulario})
+    return render(request, 'libros\crear.html', {'formulario':formulario})
 
 def editar(request,id):
     libro=Libro.objects.get(ID=id)

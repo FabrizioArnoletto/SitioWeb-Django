@@ -14,5 +14,6 @@ urlpatterns = [
     path('crear/', views.crear, name='crear'),
     path('signup/', views.sesion, name='sesion'),
     path('eliminar/<int:id>',views.eliminar, name='eliminar'),
+    path('form/', views.form, name='form'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
