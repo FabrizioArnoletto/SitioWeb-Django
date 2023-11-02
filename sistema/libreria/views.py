@@ -29,10 +29,6 @@ def editar(request,id):
         return redirect('libros')
     return render(request,'libros/editar.html',{'formulario':formulario})
 
-def form(request):
-    return render(request,'libros/form.html')
-
-
 def libros(request):
     libros = Libro.objects.all()
     print(libros)
