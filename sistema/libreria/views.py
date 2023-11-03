@@ -7,8 +7,7 @@ from django.shortcuts import render, redirect
 def inicio(request):
     return render(request,'paginas/inicio.html')
 
-def sesion(request):
-    return render(request,'paginas/sesion.html')
+
 
 def nosotros(request):
     return render(request,'paginas/nosotros.html')
