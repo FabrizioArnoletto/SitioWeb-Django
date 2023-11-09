@@ -12,4 +12,5 @@ urlpatterns = [
     path('editar/<int:id>', views.editar, name='editar'),
     path('crear/', views.crear, name='crear'),
     path('eliminar/<int:id>',views.eliminar, name='eliminar'),
+    path('comentar/<int:id>',views.comentar, name='comentar'),
 ]

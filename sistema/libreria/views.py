@@ -36,3 +36,8 @@ def eliminar(request,id):
     libro= Libro.objects.get(ID=id)
     libro.delete()
     return redirect('libros')
+
+def comentar(request,id):
+    libro= Libro.objects.get(ID=id)
+    libro.delete()
+    return redirect('libros')
