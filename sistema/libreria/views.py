@@ -5,7 +5,8 @@ from .forms import LibroForm
 from django.shortcuts import render, redirect
 
 def inicio(request):
-    return render(request,'paginas/inicio.html')
+    libros = Libro.objects.filter(Promo = True)
+    return render(request,'paginas/inicio.html', {'libros':libros})
 
 def nosotros(request):
     return render(request,'paginas/nosotros.html')

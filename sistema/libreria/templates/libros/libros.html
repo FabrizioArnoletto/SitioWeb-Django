@@ -32,7 +32,7 @@
                     <td>Titulo</td>
                     <td>Imagen</td>
                     <td>Descripcion</td>
-                    <td>Fecha</td>
+                    <td>Promo</td>
                     <td>Acciones</td>
                     {% for libro in libros %}
                         <tr class="table-secondary">
@@ -40,7 +40,7 @@
                             <td>{{libro.Titulo}}</td>
                             <td><img src="{{libro.Imagen.url}}" height="100" /></td>
                             <td>{{libro.Descripcion}}</td>
-                            <td>{{libro.Fecha}}</td>
+                            <td>{{libro.Promo}}</td>
                             <td>
                                 <a name="" id="" class="btn btn-info" href="{% url 'editar' libro.ID %}" role="button">Editar </a>
                                 <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' libro.ID %}" role="button">Borrar</a>

@@ -5,7 +5,7 @@ class Libro(models.Model):
     Titulo=models.CharField(max_length=100,verbose_name="Titulo")
     Imagen=models.ImageField(upload_to='imagenes/',verbose_name="Imagen",null=True)
     Descripcion=models.TextField(null=True,verbose_name="Descripción")
-    Fecha=models.DateField(null=True,verbose_name="Fecha")
+    Promo=models.BooleanField(null=True,verbose_name="Promo")
 
     def __str__(self):
         fila= "Titulo: " + self.Titulo + "-" + "Descripcion " + self.Descripcion
