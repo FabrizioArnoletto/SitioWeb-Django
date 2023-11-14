@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Libro
-from .forms import LibroForm
+from .models import Libro, comentarios
+from .forms import LibroForm, comentariosForm
 from django.shortcuts import render, redirect
 
 def inicio(request):
@@ -39,6 +39,8 @@ def eliminar(request,id):
     return redirect('libros')
 
 def comentar(request,id):
-    libro= Libro.objects.get(ID=id)
-    libro.delete()
-    return redirect('libros')
+    formulario = comentariosForm(request.POST or None,request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('libros')
+    return render(request, 'libros\comentar.html', {'coment':id})
