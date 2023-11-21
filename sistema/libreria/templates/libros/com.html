@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+{%extends "base.html"%} 
+{%block titulo%} Libros {%endblock%}
+{%block contenido%}
+<div >
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+                
+    <a class="dropdown-item" href="{%url 'crear'%}">Crear</a>
+            </ul>
+        </div>
+  </div>
+</nav>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+</head>
+<body>
+    <header>
+    </header>
+</div>
+<tbody>
+<div class="table-responsive">
+    <thead>
+        <tbody>
+            <div class="col-md-12">
+            <table class="table">
+                <tr class="table-primary">
+                    <td>Libro</td>
+                    <td>ID</td>
+                    <td>Comentario</td>
+                    <td>Acciones</td>
+                    {% for comentario in comentarios %}
+                        <tr class="table-secondary">
+                            <td scope="row">{{libro.ID}}</td>
+                            <td>{{libro.ID_c}}</td>
+                            <td>{{libro.Comentario}}</td>
+                            <td>
+                                <a name="" id="" class="btn btn-info" href="{% url 'editar' comentario.ID %}" role="button">Editar </a>
+                                <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' comentario.ID %}" role="button">Borrar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tr>
+            </table>
+            </div>
+        </tbody>
+    </thead>
+</div>
+</tbody>    
+    <footer>
+    </footer>
+</body>
+</html>
+{%endblock%}

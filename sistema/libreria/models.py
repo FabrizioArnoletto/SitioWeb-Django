@@ -8,7 +8,7 @@ class Libro(models.Model):
     Promo=models.BooleanField(null=True,verbose_name="Promo")
 
     def __str__(self):
-        fila= "Titulo: " + self.Titulo + "-" + "Descripcion " + self.Descripcion
+        fila= " " + self.Titulo 
         return fila
 
     def delete(self, using=None, Keep_parents=False):

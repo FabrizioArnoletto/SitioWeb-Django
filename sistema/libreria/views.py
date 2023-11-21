@@ -44,3 +44,9 @@ def comentar(request,id):
         formulario.save()
         return redirect('libros')
     return render(request, 'libros\comentar.html', {'coment':id})
+
+
+def com(request):
+    comentarios = comentarios.objects.all()
+    #print(libros)
+    return render(request, 'libros/com.html', {'comentarios':comentarios})
