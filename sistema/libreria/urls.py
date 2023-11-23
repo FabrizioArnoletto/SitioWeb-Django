@@ -13,5 +13,7 @@ urlpatterns = [
     path('crear/', views.crear, name='crear'),
     path('eliminar/<int:id>',views.eliminar, name='eliminar'),
     path('comentar/<int:id>',views.comentar, name='comentar'),
-    path('com/',views.com, name='com'),
+    path('com/<int:id>',views.com, name='com'),
+    path('eliminarc/<int:id>',views.eliminarc, name='eliminarc'),
+    path('editarc/<int:id>', views.editarc, name='editarc'),
 ]

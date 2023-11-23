@@ -1,5 +1,5 @@
 from django import forms
-from .models import Libro, comentarios
+from .models import Libro, Comentarios
 class LibroForm(forms.ModelForm):
     class Meta:
         model = Libro
@@ -7,5 +7,5 @@ class LibroForm(forms.ModelForm):
 
 class comentariosForm(forms.ModelForm):
     class Meta:
-        model = comentarios
+        model = Comentarios
         fields = '__all__'  

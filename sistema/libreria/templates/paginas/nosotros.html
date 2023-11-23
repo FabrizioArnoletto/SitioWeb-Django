@@ -1,24 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
 {%extends "base.html"%} 
 {%block titulo%} Nosotros {%endblock%}
 {%block contenido%}
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Creadores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .creators {
+      margin-top: 40px;
+    }
+    .creator {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a nuestra página de nosotros</h1>
-    </header>
-    
-    <main>
-    </main>
-    
-    <footer>
-    </footer>
+  <div class="container">
+    <h1>Sobre Nosotros</h1>
+    <div class="creators">
+      <div class="creator">
+        <h2>Tomás Prax</h2>
+        <p>
+          Tomás es un apasionado por la tecnología y la programación. Ha trabajado en diversos proyectos relacionados con el desarrollo web y la inteligencia artificial.
+        </p>
+      </div>
+      <div class="creator">
+        <h2>Nacho Visintini</h2>
+        <p>
+          Nacho es un diseñador creativo con experiencia en la creación de interfaces intuitivas y atractivas. Su habilidad para combinar diseño y funcionalidad es clave en nuestros proyectos.
+        </p>
+      </div>
+      <div class="creator">
+        <h2>Fabrizio Arnoletto</h2>
+        <p>
+          Fabrizio es un experto en análisis de datos y desarrollo de aplicaciones. Su enfoque metódico y su capacidad para resolver problemas complejos son fundamentales para nuestro equipo.
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+
 {%endblock%}

@@ -15,7 +15,7 @@ class Libro(models.Model):
         self.Imagen.storage.delete(self.Imagen.name)
         super().delete()
 
-class comentarios(models.Model):
+class Comentarios(models.Model):
     ID_c=models.AutoField(primary_key=True)
     ID=models.ForeignKey(Libro, on_delete=models.CASCADE)
     Comentario=models.TextField(null=True,verbose_name="Comentario")
